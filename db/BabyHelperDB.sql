@@ -2,10 +2,10 @@
 -- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 08, 2018 at 02:10 PM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- 主機: localhost
+-- 產生時間： 2018 年 07 月 14 日 15:04
+-- 伺服器版本: 10.1.33-MariaDB
+-- PHP 版本： 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,38 +19,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `BabyHelperDB`
+-- 資料庫： `BabyHelperDB`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `video_info`
+-- 資料表結構 `video_info`
 --
 
 CREATE TABLE `video_info` (
   `key_id` int(255) UNSIGNED NOT NULL,
-  `url` text NOT NULL,
+  `file_url` text NOT NULL,
+  `info_url` text NOT NULL,
   `user_name` text NOT NULL,
   `epoch_time` int(31) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- 已匯出資料表的索引
 --
 
 --
--- Indexes for table `video_info`
+-- 資料表索引 `video_info`
 --
 ALTER TABLE `video_info`
   ADD PRIMARY KEY (`key_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- 在匯出的資料表使用 AUTO_INCREMENT
 --
 
 --
--- AUTO_INCREMENT for table `video_info`
+-- 使用資料表 AUTO_INCREMENT `video_info`
 --
 ALTER TABLE `video_info`
   MODIFY `key_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT;
