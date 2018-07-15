@@ -31,3 +31,6 @@
   Android Upload Image using Android Upload Service, author: Belal Khan.
   https://www.simplifiedcoding.net/android-upload-image-to-server/
   This is perfect material to learn how to upload file.
+
+# Image Source
+  Icon made by Freepik from www.flaticon.com https://www.flaticon.com/authors/freepik

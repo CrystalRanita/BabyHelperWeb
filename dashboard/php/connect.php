@@ -11,7 +11,7 @@
     $response = array();
   
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['upload_user_name']) and isset($_FILES['video']['name'])) {
+        if (isset($_POST['upload_user_name']) and isset($_FILES['video']['name']) and isset($_FILES['txt']['name'])) {
             $con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME) or die('Failed to connect database!');
     
             // upload user
