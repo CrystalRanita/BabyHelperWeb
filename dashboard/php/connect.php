@@ -13,6 +13,7 @@
     $server_ip = gethostbyname(gethostname());
     $url = 'http://'.$server_ip.$file_upload_path; // http://localhost/dashboard/php/uploads/
     $response = array();
+    $exe_report_path = $run_files_path.'report.txt';
 
     // measure
     $exe_files_path = $run_files_path.EXE_FILE;
@@ -111,10 +112,10 @@
                             return;
                         }
                         // Run measure, run in auto mode 1 to read config file.
-                        echo "run ".$exe_files_path." ".$file_path." 1<br>";
+                        echo "run ".$exe_files_path." ".$file_path." ".$config_files_path." 1 ".$exe_report_path."<br>";
                         // exec("$exe_files_path", $output, $return);
-                        
-                        exec("$exe_files_path $file_path $config_files_path 1 2>&1", $output, $return);
+
+                        exec("$exe_files_path $file_path $config_files_path 1 $exe_report_path 2>&1", $output, $return);
                         //exec("/home/crystal/sdk/android_sdk/platform-tools/adb devices", $output, $return);
                         foreach($output as $val) {
                             echo "output: ".$val."<br>";
