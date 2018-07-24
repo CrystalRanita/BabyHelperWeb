@@ -117,9 +117,9 @@
 
                         exec("$exe_files_path $file_path $config_files_path 1 $exe_report_path 2>&1", $output, $return);
                         //exec("/home/crystal/sdk/android_sdk/platform-tools/adb devices", $output, $return);
-                        foreach($output as $val) {
-                            echo "output: ".$val."<br>";
-                        }
+                        //foreach($output as $val) {
+                            // echo "output: ".$val."<br>";
+                        //}
                         echo "result: ".$return."<br>";
                         if ($return !== 0) {
                             $response['error']=true;
@@ -128,6 +128,8 @@
                             return;
                         } else {
                             echo "run file success<br>";
+                            $response['success']=true;
+                            $response['message']='result success';
                         }
                     } else {
                         $response['error']=true;
@@ -146,6 +148,8 @@
                 $response['error']=true;
                 $response['message']=$e->getMessage();
                 mysqli_close($con);
+                echo json_encode($response);
+                return;
             } 
         } else {
             $response['error']=true;
